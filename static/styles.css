@@ -1,0 +1,70 @@
+/* Стили для кнопки добавления проекта */
+button {
+    background-color: #4CAF50; /* Зеленый цвет */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Стили для списка проектов */
+ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0;
+}
+
+/* Стили для элементов списка проектов */
+li {
+    margin: 10px 0;
+}
+
+/* Стили для ссылок в списке проектов */
+a {
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+    color: #333; /* Цвет текста ссылок */
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+/* Стили для содержимого модального окна */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* Стили для кнопки закрытия модального окна */
+.modal-content span {
+    float: right;
+    cursor: pointer;
+}
+
+/* Стили для формы добавления проекта в модальном окне */
+.modal-content form {
+    margin-top: 20px;
+}
+
+/* Стили для меток в форме добавления проекта */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Стили для поля ввода в форме добавления проекта */
+input[type="text"],
+input[type="date"] {
+
