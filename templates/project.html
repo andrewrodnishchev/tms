@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ project.name }}</title>
-    <link rel="stylesheet" type="text/css" href="/static/styles.css">
 </head>
 <body>
     <h1>{{ project.name }}</h1>
-    <p><strong>Описание проекта:</strong> {{ project.description }}</p>
-    <p><strong>Дата добавления:</strong> {{ project.date_added }}</p>
+    <!-- Временный вывод значений переменных для проверки -->
+    <p><strong>Описание проекта (временно):</strong> {{ project.description }}</p>
+    <p><strong>Дата добавления (временно):</strong> {{ project.date_added }}</p>
+    <!-- Конец временного вывода -->
     <a href="{{ url_for('index') }}">Вернуться к списку проектов</a>
 </body>
 </html>

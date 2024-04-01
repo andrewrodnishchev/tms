@@ -4,29 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Список проектов</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-    <style>
-        /* Остальные ваши стили */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.4);
-            padding-top: 60px;
-        }
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
 </head>
 <body>
     <h1>Список проектов</h1>
@@ -55,16 +33,39 @@
     <!-- Список проектов -->
     <ul>
         {% for project in projects %}
-            <li><a href="{{ url_for('project', project_id=project['id']) }}">{{ project['name'] }}</a></li>
+            <li>
+                <a href="{{ url_for('project', project_id=project['id']) }}">{{ project['name'] }}</a>
+                <!-- Использование значка троеточия с выпадающим меню для удаления проекта -->
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown('{{ project.id }}')">...</button>
+                    <div id="dropdown_{{ project.id }}" class="dropdown-content">
+                        <form action="{{ url_for('delete_project', project_id=project['id']) }}" method="post">
+                            <button type="submit">Удалить</button>
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <!-- Горизонтальная разделительная линия между проектами -->
+            <hr class="horizontal-line">
         {% endfor %}
     </ul>
 
     <script>
-        // Закрываем модальное окно при клике вне его области
+        function toggleDropdown(projectId) {
+            var dropdown = document.getElementById("dropdown_" + projectId);
+            dropdown.classList.toggle("show");
+        }
+
+        // Закрываем выпадающее меню, если пользователь кликнул вне его
         window.onclick = function(event) {
-            var modal = document.getElementById('modal');
-            if (event.target == modal) {
-                modal.style.display = "none";
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
             }
         }
     </script>
