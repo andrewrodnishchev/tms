@@ -73,12 +73,7 @@ def add_project():
             cursor = conn.cursor()
             cursor.execute("INSERT INTO projects (name, description, date_added) VALUES (?, ?, ?)", (name, description, date_added))
             conn.commit()
-        return redirect(url_for('index'))
-    except (KeyError, sqlite3.Error) as e:
-        print("Ошибка при добавлении проекта:", e)
-        return "Ошибка при добавлении проекта."
-
-@main.route('/delete_project/<int:project_id>', methods=['POST'])
+        return redirect(url_for('index'))@main.route('/delete_project/<int:project_id>', methods=['POST'])
 def delete_project(project_id):
     try:
         with get_db() as conn:
@@ -96,3 +91,8 @@ def confirm_delete(project_id):
 
 if __name__ == '__main__':
     main.run(debug=True)
+
+    except (KeyError, sqlite3.Error) as e:
+        print("Ошибка при добавлении проекта:", e)
+        return "Ошибка при добавлении проекта."
+
