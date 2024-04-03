@@ -1,0 +1,74 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 756-994-063
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2024 11:22:30] "GET /search_projects?query= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2024 11:22:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2024 11:22:36] "GET /project/7 HTTP/1.1" 200 -
+INFO:root:Проект успешно добавлен в базу данных
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2024 11:22:51] "[32mPOST /add_project HTTP/1.1[0m" 302 -
+INFO:root:Выполнен запрос к базе данных для получения списка проектов
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2024 11:22:51] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2024 11:22:51] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2024 11:24:53] "GET /project/7 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2024 11:25:01] "GET /project/9 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 756-994-063
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 756-994-063
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2024 11:25:53] "GET /project/15 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 756-994-063
+к
+INFO:root:Выполнен запрос к базе данных для получения списка проектов
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2024 11:40:46] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2024 11:40:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:root:Выполнен запрос к базе данных для получения проекта с id=7
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2024 11:40:47] "GET /project/7 HTTP/1.1" 200 -
+INFO:root:Выполнен запрос к базе данных для получения списка проектов
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2024 11:40:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2024 11:40:58] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:root:Проект успешно добавлен в базу данных
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2024 11:41:06] "[32mPOST /add_project HTTP/1.1[0m" 302 -
+INFO:root:Выполнен запрос к базе данных для получения списка проектов
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2024 11:41:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2024 11:41:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 756-994-063
+INFO:root:Выполнен запрос к базе данных для получения списка проектов
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2024 11:44:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2024 11:44:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:root:Выполнен запрос к базе данных для получения проекта с id=7
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2024 11:44:02] "GET /project/7 HTTP/1.1" 200 -
+INFO:root:Выполнен запрос к базе данных для получения проекта с id=8
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2024 11:44:04] "GET /project/8 HTTP/1.1" 200 -
+INFO:root:Выполнен запрос к базе данных для получения проекта с id=11
+INFO:werkzeug:127.0.0.1 - - [03/Apr/2024 11:44:06] "GET /project/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/admin/PycharmProjects/pythonProject9/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 756-994-063
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 756-994-063

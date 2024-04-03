@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Список проектов</title>
     <link rel="stylesheet" type="text/css" href="/static/styles.css">
+    <style>
+        .add-project-btn {
+            margin-right: 20px; /* Увеличиваем отступ справа для кнопки "Добавить проект" */
+        }
+    </style>
 </head>
 <body>
     <h1>Список проектов</h1>
 
     <!-- Кнопка для открытия модального окна -->
-    <button onclick="document.getElementById('modal').style.display='block'">Добавить проект</button>
+    <button class="add-project-btn" onclick="document.getElementById('modal').style.display='block'">Добавить проект</button>
+
+    <!-- Форма поиска -->
+    <form action="{{ url_for('search_projects') }}" method="GET" style="display: inline-block;">
+        <input type="text" id="search" name="query" placeholder="Введите название проекта">
+        <button type="submit">Поиск</button>
+    </form>
 
     <!-- Модальное окно для добавления проекта -->
     <div id="modal" class="modal">
@@ -33,7 +44,7 @@
     <!-- Список проектов -->
     <ul>
         {% for project in projects %}
-            <li>
+            <li class="project {% if not loop.first %} hidden {% endif %}">
                 <a href="{{ url_for('project', project_id=project['id']) }}">{{ project['name'] }}</a>
                 <!-- Использование значка троеточия с выпадающим меню для удаления проекта -->
                 <div class="dropdown">
@@ -68,6 +79,21 @@
                 }
             }
         }
+
+        // JavaScript для поиска проектов по введенному названию
+        var searchInput = document.getElementById('search');
+        searchInput.addEventListener('input', function() {
+            var inputText = searchInput.value.trim().toLowerCase();
+            var projects = document.getElementsByClassName('project');
+            Array.from(projects).forEach(function(project) {
+                var projectName = project.querySelector('a').textContent.trim().toLowerCase();
+                if (projectName.includes(inputText)) {
+                    project.classList.remove('hidden');
+                } else {
+                    project.classList.add('hidden');
+                }
+            });
+        });
     </script>
 </body>
 </html>
